@@ -13,25 +13,23 @@
   </head>
   <body>
 
-    <div class="topnav" id="myTopnav">
+    <header class="topnav" id="myTopnav">
 
       <div class="header-logo">
-        <img alt="logo" src="Logo.png" width="auto" height="auto" />
+        <img alt="logo" src="Logo.png"/>
+      </div>
+      <div class="icon" onclick="editNav()">
+        <i class="fa fa-bars"></i>
       </div>
 
       <div class="main-navbar">
-        
-        <a href="#" class="active"><span>Accueil</span></a>
-        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#" class="active"><span>Détails de l'évènement</span></a>
         <a href="#"><span>À propos</span></a>
         <a href="#"><span>Contact</span></a>
-        <a href="#"><span>Évènements passés</span></a>
-        <a href="javascript:void(0);" class="icon" onclick="editNav()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <a href="#"><span>Évènements passés</span></a>    
       </div>
 
-    </div>
+    </header>
 
     <main>
       <div class="hero-section">
@@ -62,10 +60,9 @@
           <div class="modal-body">
             <form
               name="reserve"
-              onsubmit="validate()"
               action="index.html"
-     
               method="get"
+             
             >
               <div
                 class="formData">
@@ -115,7 +112,7 @@
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData">
+                class="formData ">
                 <input
                   class="checkbox-input city"
                   type="radio"
@@ -190,7 +187,7 @@
                 type="checkbox"
                 id="checkbox1"
                 name="agreement"
-               
+                required
                 checked
                 />
                 <label class="checkbox2-label" for="checkbox1">
@@ -209,9 +206,8 @@
               </div>
               <input
                 class="btn-submit"
-                type="submit"
-              
-                class="button"
+                type="button"
+                onclick="validate()"
                 value="C'est parti"
               />
             </form>
